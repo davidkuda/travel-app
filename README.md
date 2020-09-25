@@ -1,6 +1,6 @@
 # travel-app
 
-In this repo I will build my capstone project of Udacity's Front End Engineer Degree.
+In this repo I will build my capstone project of [Udacity's](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011) Front End Engineer Degree.
 
 ## Tech Stack
 - Node JS
