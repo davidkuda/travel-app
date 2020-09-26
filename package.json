@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/DavidKuda/travel-app/issues"
   },
-  "homepage": "https://github.com/DavidKuda/travel-app#readme"
+  "homepage": "https://github.com/DavidKuda/travel-app#readme",
+  "devDependencies": {
+    "webpack": "^4.44.2",
+    "webpack-dev-server": "^3.11.0"
+  }
 }
