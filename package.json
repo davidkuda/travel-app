@@ -4,7 +4,8 @@
   "description": "In this repo I will build my capstone project of Udacity's Front End Engineer Degree.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server/server.js --open"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,8 @@
   "devDependencies": {
     "webpack": "^4.44.2",
     "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
