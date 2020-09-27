@@ -1,3 +1,3 @@
 export const printName = () => {
-    console.log('name');
+    console.log('my name is');
 };
