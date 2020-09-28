@@ -15,14 +15,6 @@ printName();
 console.log('this message will be in output: FENDER STRATOCASTER!');
 
 
-// img tests
-var homeImg = document.getElementById("home");
-homeImg.src = homeIcon;
-
-var frontImg = document.getElementById("frontImg");
-frontImg.src = travelAlps;
-
-
 // global Client exports
 export {
     handleSubmit

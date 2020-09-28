@@ -5,6 +5,12 @@
 }
 
 body {
-    // background: url('./img/travel-alps.jpg');
+    height: 100vh;
+    // background: url('../images/travel-alps.jpg');
+    background-image: linear-gradient(to right bottom,
+        #455a64ee,
+        #b0bec5aa),
+        url('../images/travel-alps.jpg');
+    background-size: cover;
+    background-position: bottom;
 }
-
