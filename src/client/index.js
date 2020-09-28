@@ -16,12 +16,17 @@ import {updateUi} from './js/updateUi';
 
  // app code
 
+ // variables
+
 const userInputForm = document.getElementById('userInputForm');
+
+// event listeners
 
 userInputForm.addEventListener('submit', () => {
     console.log('Submit was fired!');
     let userInput = getUserInput();
     console.log(userInput);
+    console.log('destination: ', userInput.destination);
     let formContainer = document.getElementById('form-container');
     updateUi(formContainer, markupLoader);
 })
