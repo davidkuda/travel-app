@@ -15,7 +15,7 @@
     
             <div class="form-container">
                 <h1>Discover The World.</h1>
-                <form id="userInputForm" class="flex-form" onsubmit="return Client.handleSubmit(event)">
+                <form id="userInputForm" class="flex-form" onsubmit="return Client.formPreventDefault(event)">
 
                     <!-- <label for="from">
                         <i class="icon-location"></i>
@@ -42,9 +42,6 @@
                         type="submit"
                         name=""
                         value="Plan!"
-                        onclick="return
-                        Client.handleSubmit(event)"
-                        onsubmit="return Client.handleSubmit(event)"
                     >
                 </form>
             </div>

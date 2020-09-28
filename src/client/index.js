@@ -5,7 +5,7 @@ import "./styles/form.scss";
 
 // import own modules
 import {printName} from './js/printName';
-import {handleSubmit} from './js/handleSubmit';
+import {formPreventDefault} from './js/formPreventDefault';
 import {getUserInput} from './js/getUserInput';
 
 // import assets
@@ -26,6 +26,6 @@ userInputForm.addEventListener('submit', () => {
 
 // global Client exports
 export {
-    handleSubmit,
+    formPreventDefault,
     getUserInput
 }

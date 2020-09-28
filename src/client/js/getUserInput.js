@@ -1,5 +1,4 @@
-export function getUserInput(event) {
-    event.preventDefault();
+export function getUserInput() {
 
     // get user input and save it into variable
     let inputDate = document.getElementById("form-date").value;
@@ -11,4 +10,5 @@ export function getUserInput(event) {
     }
 
     return userInput
+    // TODO: In future the app should post data to the backend
 };
