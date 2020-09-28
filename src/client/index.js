@@ -9,6 +9,9 @@ import {formPreventDefault} from './js/formPreventDefault';
 import {getUserInput} from './js/getUserInput';
 import {markupLoader} from './js/markupLoader';
 import {updateUi} from './js/updateUi';
+import {apiCall} from './js/apiCall';
+import {getGeonamesUrl} from './js/apiGeonames';
+import {sampleResponse} from './js/markupResponse';
 
 // import assets
  import travelAlps from "./media/travel-alps.jpg";
@@ -22,13 +25,17 @@ const userInputForm = document.getElementById('userInputForm');
 
 // event listeners
 
-userInputForm.addEventListener('submit', () => {
+userInputForm.addEventListener('submit', async () => {
     console.log('Submit was fired!');
     let userInput = getUserInput();
-    console.log(userInput);
-    console.log('destination: ', userInput.destination);
+    console.log('User Input: ', userInput);
     let formContainer = document.getElementById('form-container');
     updateUi(formContainer, markupLoader);
+    let geonames = await apiCall(await getGeonamesUrl(userInput.destination));
+    console.log('Geonames: ', geonames.geonames[0]);
+    let stadtinfo = await sampleResponse(geonames, userInput.date);
+    console.log('Stadt Info: ', stadtinfo);
+    updateUi(formContainer, stadtinfo);
 })
 
 // global Client exports
