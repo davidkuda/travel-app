@@ -8,6 +8,8 @@ import "./styles/loader.scss";
 import {printName} from './js/printName';
 import {formPreventDefault} from './js/formPreventDefault';
 import {getUserInput} from './js/getUserInput';
+import {markupLoader} from './js/markupLoader';
+import {updateUi} from './js/updateUi';
 
 // import assets
  import travelAlps from "./media/travel-alps.jpg";
@@ -16,17 +18,20 @@ import {getUserInput} from './js/getUserInput';
 
 printName();
 
-console.log('hello from index.js!');
-
 const userInputForm = document.getElementById('userInputForm');
+
 userInputForm.addEventListener('submit', () => {
     console.log('Submit was fired!');
     let userInput = getUserInput();
     console.log(userInput);
+    let formContainer = document.getElementById('form-container');
+    updateUi(formContainer, markupLoader);
 })
 
 // global Client exports
 export {
     formPreventDefault,
-    getUserInput
+    getUserInput,
+    markupLoader,
+    updateUi
 }
