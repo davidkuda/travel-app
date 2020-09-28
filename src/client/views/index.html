@@ -10,28 +10,42 @@
         <h1>TRAVEL APP</h1>
     </header>
     <main>
-        <h1>Content</h1>
-        <form class="tbd" onsubmit="return Client.handleSubmit(event)">
+    
+            <div class="form-container">
+                <h1>Discover The World.</h1>
+                <form class="flex-form" onsubmit="return Client.handleSubmit(event)">
 
-            <input 
-                id="name"
-                type="text"
-                name="input"
-                value=""
-                placeholder="Link"
-            >
+                    <label for="from">
+                        <i class="icon-location"></i>
+                    </label>
 
-            <input
-                id="submit"
-                type="submit"
-                name=""
-                value="submit"
-                onclick="return
-                Client.handleSubmit(event)"
-                onsubmit="return Client.handleSubmit(event)"
-            >
+                    <input
+                        class="form-element"
+                        id="form-date"
+                        type="date"
+                        placeholder="Date">
 
-        </form>
+                    <input
+                        class="form-element"
+                        id="form-destination"
+                        type="text"
+                        name="input"
+                        value=""
+                        placeholder="Destination"
+                    >
+
+                    <input
+                        class="form-element"
+                        id="submit"
+                        type="submit"
+                        name=""
+                        value="Plan!"
+                        onclick="return
+                        Client.handleSubmit(event)"
+                        onsubmit="return Client.handleSubmit(event)"
+                    >
+                </form>
+            </div>
 
     </main>
     <footer>

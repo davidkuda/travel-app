@@ -1,13 +1,14 @@
 // import CSS
 import './styles/base.scss';
+import "./styles/form.scss";
 
 // import own modules
 import {printName} from './js/printName';
 import {handleSubmit} from './js/handleSubmit';
 
 // import assets
- import homeIcon from "./images/menu-icon.png";
- import travelAlps from "./images/travel-alps.jpg";
+ import travelAlps from "./media/travel-alps.jpg";
+ import iconLocation from "./media/icon-location.svg";
 
 
 printName();
