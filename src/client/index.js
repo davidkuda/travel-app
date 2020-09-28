@@ -1,5 +1,6 @@
 // import CSS
 import './styles/base.scss';
+import './styles/grid.scss';
 import "./styles/form.scss";
 
 // import own modules
