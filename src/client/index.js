@@ -2,6 +2,7 @@
 import './styles/base.scss';
 import './styles/grid.scss';
 import "./styles/form.scss";
+import "./styles/loader.scss";
 
 // import own modules
 import {printName} from './js/printName';
