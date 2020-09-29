@@ -11,6 +11,7 @@ import {markupLoader} from './js/markupLoader';
 import {updateUi} from './js/updateUi';
 import {apiCall} from './js/apiCall';
 import {getGeonamesUrl} from './js/apiGeonames';
+import {getWeatherbitUrl} from './js/apiWeatherbit';
 import {sampleResponse} from './js/markupResponse';
 
 // import assets
@@ -26,6 +27,7 @@ const userInputForm = document.getElementById('userInputForm');
 // event listeners
 
 userInputForm.addEventListener('submit', async () => {
+
     console.log('Submit was fired!');
     let userInput = getUserInput();
     console.log('User Input: ', userInput);
@@ -33,9 +35,18 @@ userInputForm.addEventListener('submit', async () => {
     updateUi(formContainer, markupLoader);
     let geonames = await apiCall(await getGeonamesUrl(userInput.destination));
     console.log('Geonames: ', geonames.geonames[0]);
-    let stadtinfo = await sampleResponse(geonames, userInput.date);
-    console.log('Stadt Info: ', stadtinfo);
-    updateUi(formContainer, stadtinfo);
+    let geoResponse = await sampleResponse(geonames, userInput.date);
+    console.log('Stadt Info: ', geoResponse);
+
+    let latBerlin = 52.52437;
+    let lngBerlin = 13.41053;
+    let startDate = '2019-10-20';
+    let endDate = '2019-10-21';
+    let weatherbitUrl = await getWeatherbitUrl(latBerlin, lngBerlin, startDate, endDate);
+    weatherData = await apiCall(weatherbitUrl);
+    console.log('weather Data: ', weatherData)
+
+    updateUi(formContainer, geoResponse);
 })
 
 // global Client exports
