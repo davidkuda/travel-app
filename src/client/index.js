@@ -3,6 +3,7 @@ import './styles/base.scss';
 import './styles/grid.scss';
 import "./styles/form.scss";
 import "./styles/loader.scss";
+import "./styles/travel-information.scss";
 
 // import own modules
 import {formPreventDefault} from './js/formPreventDefault';
@@ -12,6 +13,7 @@ import {updateUi} from './js/updateUi';
 import {apiCall} from './js/apiCall';
 import {getGeonamesUrl} from './js/apiGeonames';
 import {getWeatherbitUrl} from './js/apiWeatherbit';
+import { getPixabayUrl } from './js/apiPixabay';
 import {sampleResponse} from './js/markupResponse';
 
 // import assets
@@ -30,23 +32,37 @@ userInputForm.addEventListener('submit', async () => {
 
     console.log('Submit was fired!');
     let userInput = getUserInput();
-    console.log('User Input: ', userInput);
-    let formContainer = document.getElementById('form-container');
-    updateUi(formContainer, markupLoader);
-    let geonames = await apiCall(await getGeonamesUrl(userInput.destination));
-    console.log('Geonames: ', geonames.geonames[0]);
-    let geoResponse = await sampleResponse(geonames, userInput.date);
-    console.log('Stadt Info: ', geoResponse);
+    let formContainer = document.getElementById('form-container'); //TODO: Change name to 'update main content'
+    updateUi(formContainer, markupLoader); //TODO: make markup class and get child loader
 
-    let latBerlin = 52.52437;
-    let lngBerlin = 13.41053;
+    let dates = {
+        startDate: userInput.date,
+        endDate: null //TODO: get endDate from user
+    };
+
+    let apiData = {
+        geonames: await apiCall(await getGeonamesUrl(userInput.destination))
+    };
+
+    let pixabayData = await apiCall(await getPixabayUrl());
+    apiData['pixabay'] = pixabayData;
+
+    let latitude = apiData.geonames.geonames[0].lat;
+    let longitude = apiData.geonames.geonames[0].lng;
     let startDate = '2019-10-20';
     let endDate = '2019-10-21';
-    let weatherbitUrl = await getWeatherbitUrl(latBerlin, lngBerlin, startDate, endDate);
-    weatherData = await apiCall(weatherbitUrl);
-    console.log('weather Data: ', weatherData)
+    let weatherbit = await apiCall(await getWeatherbitUrl(latitude, longitude, startDate, endDate));
+    apiData['weatherbit'] = weatherbit;
 
-    updateUi(formContainer, geoResponse);
+    
+    console.log('geonames Data: ', apiData.geonames.geonames[0]);
+    console.log('weatherbit Data: ', apiData.weatherbit);
+    console.log('pixabay Data: ', apiData.pixabay.hits[0].webformatURL);
+    console.log('apiData: ', apiData);
+
+    let travelResponse = await sampleResponse(apiData, dates);
+    updateUi(formContainer, travelResponse);
+
 })
 
 // global Client exports
