@@ -13,6 +13,7 @@ In this repo I will build my capstone project of [Udacity's](https://www.udacity
 - Node JS
 - Webpack
 - Vanilla JS
+- SASS
 - HTML5 & CSS3
 
 ## Core Topics
