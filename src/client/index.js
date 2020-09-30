@@ -4,6 +4,7 @@ import './styles/grid.scss';
 import "./styles/form.scss";
 import "./styles/loader.scss";
 import "./styles/travel-information.scss";
+import "./styles/footer.scss";
 
 // import own modules
 import {formPreventDefault} from './js/formPreventDefault';
