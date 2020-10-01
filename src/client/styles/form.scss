@@ -27,19 +27,18 @@ h1 {
     z-index: 10;
     position: relative;
     width: 500px;
-    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.3);
+    // box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.3);
     flex-flow: column wrap;
 }
 
-.form-division__base {
+.form-division__row {
     display: flex;
     flex-flow: row nowrap;
 }
 
-.form-division__element {
-    border: 0;
-    padding: 0 0 0 10px;
+.form-division__input-element {
     background: #fff;
+    border: 0;
     line-height: 3em;
     font-size: 1rem;
     border-radius: 0;
@@ -47,7 +46,17 @@ h1 {
     -webkit-appearance: none;
     flex-basis: auto;
     flex-grow: 1;
+    padding: 0.1em;
     margin: 0.1em;
+}
+
+.form-division__label-element {
+    // line-height: 3em;
+    font-size: 0.8rem;
+    -webkit-appearance: none;
+    flex-basis: auto;
+    flex-grow: 1;
+    padding: 0.1em;
 }
 
 input[type="text"] {
