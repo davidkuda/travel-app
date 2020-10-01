@@ -1,0 +1,23 @@
+.grid-footer {
+    grid-area: footer;
+}
+
+footer {
+    margin: 0;
+    padding: 0;
+    // background-color: white;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+    color: #fff;
+    text-align: center;
+    font-size: small;
+
+    a {
+        text-decoration: underline;
+        color: #fff;
+        margin: 0 1em;
+    }
+
+}
