@@ -6,55 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kuda Travel App</title>
 </head>
+
 <body>
     <div class="grid-container">
-    <header class="grid-header">
-        <h2>((header))</h2>
-    </header>
-    <main class="grid-main">
-    
-            <div id="form-container">
-                <h1>Discover The World.</h1>
-                <form id="userInputForm" class="flex-form" onsubmit="return Client.formPreventDefault(event)">
+        <header class="grid-header">
+            <h2>((header))</h2>
+        </header>
+        <main class="grid-main">
 
-                    <!-- <label for="from">
-                        <i class="icon-location"></i>
-                    </label> -->
+            <div class="main-container">
 
-                    <input
-                        class="form-element"
-                        id="form-date"
-                        type="date"
-                        placeholder="YYYY.MM.DD">
-
-                    <input
-                        class="form-element"
-                        id="form-destination"
-                        type="text"
-                        placeholder="Destination"
-                    >
-
-                    <input
-                        class="form-element"
-                        id="form-submit"
-                        type="submit"
-                        value="Plan!"
-                    >
-                </form>
+                <div id="form-container">
+                    <h1>Discover The World.</h1>
+                    <form id="userInputForm" class="flex-form" onsubmit="return Client.formPreventDefault(event)">
+                        <div class="form-division__base form-division__top">
+                        <input class="form-division__element" id="form-start-date" type="date" placeholder="YYYY.MM.DD">
+                        <input class="form-division__element" id="form-end-date" type="date" placeholder="YYYY.MM.DD">
+                        </div>
+                        <div class="form-division__base form-division__bottom">
+                        <input class="form-division__element" id="form-destination" type="text" placeholder="Destination">
+                        <input class="form-division__element" id="form-submit" type="submit" value="Plan!">
+                        </div>
+                    </form>
+                </div>
             </div>
 
-    </main>
-    <footer class="grid-footer">
-        <p>made with ❤️ by David Kuda from Berlin</p>
-        <div class="links">
-            <a href="https://ch.linkedin.com/in/ozzie-kuda-1458b8b8" target="_blank">
-                <span>LinkedIn</span>
-            </a>
-            <a href="https://github.com/OzzieKuda" target="_blank">
-                <span>GitHub</span>
-            </a>
-        </div>
-    </footer>
+        </main>
+        <footer class="grid-footer">
+            <p>made with ❤️ by David Kuda from Berlin</p>
+            <div class="links">
+                <a href="https://ch.linkedin.com/in/ozzie-kuda-1458b8b8" target="_blank">
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/OzzieKuda" target="_blank">
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </footer>
     </div>
 </body>
+
 </html>
