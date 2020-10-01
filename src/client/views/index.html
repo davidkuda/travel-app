@@ -14,13 +14,31 @@
         </header>
         <main class="grid-main">
 
-            <div id="form-container">
-                <h1>Discover The World.</h1>
-                <form id="userInputForm" class="flex-form" onsubmit="return Client.formPreventDefault(event)">
-                    <input class="form-element" id="form-date" type="date" placeholder="YYYY.MM.DD">
-                    <input class="form-element" id="form-destination" type="text" placeholder="Destination">
-                    <input class="form-element" id="form-submit" type="submit" value="Plan!">
-                </form>
+            <div class="main-container">
+
+                <div id="form-container">
+                    <h1>Discover The World.</h1>
+                    <form id="userInputForm" class="flex-form" onsubmit="return Client.formPreventDefault(event)">
+
+                        <div class="form-division__row">
+                            <label class="form-division__label-element" for="form-start-date">start date
+                                (dd.mm.yyyy)</label>
+                            <label class="form-division__label-element" for="form-end-date">end date
+                                (dd.mm.yyyy)</label>
+                        </div>
+                        <div class="form-division__row">
+                            <input class="form-division__input-element" id="form-start-date" type="date"
+                                placeholder="YYYY.MM.DD">
+                            <input class="form-division__input-element" id="form-end-date" type="date"
+                                placeholder="YYYY.MM.DD">
+                        </div>
+                        <div class="form-division__row">
+                            <input class="form-division__input-element" id="form-destination" type="text"
+                                placeholder="Destination">
+                            <input class="form-division__input-element" id="form-submit" type="submit" value="Plan!">
+                        </div>
+                    </form>
+                </div>
             </div>
 
         </main>

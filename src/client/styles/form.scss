@@ -1,10 +1,3 @@
-// .form {
-//     width: 300px;
-//     padding: 10px;
-//     border-radius: 5%;
-// }
-
-
 // CodePen inspiration: https://codepen.io/kathykato/pen/dzdgPJ
 
 h1 {
@@ -21,8 +14,6 @@ h1 {
     color: #fff;
     padding: 0 30px;
     cursor: pointer;
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
     transition: all 0.2s;
 }
 
@@ -37,18 +28,37 @@ h1 {
     z-index: 10;
     position: relative;
     width: 500px;
-    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.3);
+    // box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.3);
+    flex-flow: column wrap;
 }
 
-.flex-form > * {
-    border: 0;
-    padding: 0 0 0 10px;
+.form-division__row {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.form-division__input-element {
+
     background: #fff;
-    line-height: 50px;
+    border: 0;
+    line-height: 3em;
     font-size: 1rem;
     border-radius: 0;
     outline: 0;
     -webkit-appearance: none;
+    flex-basis: auto;
+    flex-grow: 1;
+    padding: 0.1em 0.5em;
+    margin: 0.1em;
+}
+
+.form-division__label-element {
+    // line-height: 3em;
+    font-size: 0.8rem;
+    -webkit-appearance: none;
+    flex-basis: auto;
+    flex-grow: 1;
+    padding: 0.1em;
 }
 
 input[type="text"] {
