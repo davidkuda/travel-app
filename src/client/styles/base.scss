@@ -9,12 +9,23 @@
 body {
     height: 100vh;
     width: 100%;
-    background-image: linear-gradient(to right bottom,
-        #455a64ee,
-        #b0bec5aa),
-        url('../media/travel-alps.jpg');
+    // background-image: linear-gradient(to right bottom,
+    //     #455a64ee,
+    //     #b0bec5aa),
+    //     url('../media/travel-alps.jpg');
+        background-image: url('../media/travel-alps.jpg');
     background-size: cover;
     overflow: hidden;
     background-position: bottom;
     color: #f0f0f0;
+}
+
+.main-container {
+    padding: 5em;
+    background-color: #222255aa;
+     -webkit-backdrop-filter: blur(10px);
+     backdrop-filter: blur(10px);
+    border-radius: 10px;
+    
+    
 }
