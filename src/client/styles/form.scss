@@ -31,15 +31,23 @@ h1 {
     flex-flow: column wrap;
 }
 
-.flex-form>* {
+.form-division__base {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.form-division__element {
     border: 0;
     padding: 0 0 0 10px;
     background: #fff;
-    line-height: 50px;
+    line-height: 3em;
     font-size: 1rem;
     border-radius: 0;
     outline: 0;
     -webkit-appearance: none;
+    flex-basis: auto;
+    flex-grow: 1;
+    margin: 0.1em;
 }
 
 input[type="text"] {
