@@ -13,7 +13,7 @@ body {
     //     #455a64ee,
     //     #b0bec5aa),
     //     url('../media/travel-alps.jpg');
-        background-image: url('../media/travel-alps.jpg');
+    background-image: url('../media/travel-alps.jpg');
     background-size: cover;
     overflow: hidden;
     background-position: bottom;
@@ -22,10 +22,8 @@ body {
 
 .main-container {
     padding: 5em;
-    background-color: #222255aa;
-     -webkit-backdrop-filter: blur(10px);
-     backdrop-filter: blur(10px);
+    background-color: #00000033;
     border-radius: 10px;
-    
-    
+     -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
 }
