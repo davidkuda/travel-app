@@ -3,9 +3,9 @@
 }
 
 footer {
+    
     margin: 0;
     padding: 0;
-    // background-color: white;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -13,6 +13,11 @@ footer {
     color: #fff;
     text-align: center;
     font-size: small;
+     padding: 1em;
+     background-color: #00000033;
+     border-radius: 10px;
+     -webkit-backdrop-filter: blur(10px);
+     backdrop-filter: blur(10px);
 
     a {
         text-decoration: underline;
