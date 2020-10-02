@@ -1,12 +1,14 @@
 export function getUserInput() {
 
     // get user input and save it into variable
-    let inputDate = document.getElementById("form-date").value;
     let inputDestination = document.getElementById("form-destination").value;
+    let inputStartDate = document.getElementById("form-start-date").value;
+    let inputEndDate = document.getElementById("form-end-date").value;
 
     let userInput = {
         destination: inputDestination,
-        date: inputDate
+        startDate: inputStartDate,
+        endDate: inputEndDate
     }
 
     return userInput
