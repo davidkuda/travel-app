@@ -39,7 +39,7 @@
 
     console.log(apiData)
 
-    let travelResponse = await Client.sampleResponse(apiData, dates);
+    let travelResponse = await Client.markupResponse(apiData, dates);
     Client.changeBackground(apiData.pixabay.hits[0].webformatURL);
     // Client.changeBackground(apiData.pixabay.hits[0].largeImageURL);
     Client.updateUi(travelResponse);
