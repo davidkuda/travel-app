@@ -1,0 +1,18 @@
+.weather-box {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.day {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 1em;
+}
+
+.date {
+    font-weight: 600;
+}
+
+.description {
+    font-weight: 300;
+}

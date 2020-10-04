@@ -21,22 +21,16 @@
 
     // get Weatherbit API Data
 
-    /*
-
     let latitude = apiData.geonames.geonames[0].lat;
     let longitude = apiData.geonames.geonames[0].lng;
-    let startDate = userInput.startDate;
-    let endDate = userInput.endDate;
-    let weatherbit = await Client.apiCall(await Client.getWeatherbitUrl(latitude, longitude, startDate, endDate));
+    let weatherbit = await Client.apiCall(await Client.getWeatherbitUrl(latitude, longitude));
     apiData['weatherbit'] = weatherbit;
-
-    */
 
     console.log(apiData)
 
     let travelResponse = await Client.markupResponse(apiData, dates);
-    Client.changeBackground(apiData.pixabay.hits[0].webformatURL);
-    // Client.changeBackground(apiData.pixabay.hits[0].largeImageURL);
+    // Client.changeBackground(apiData.pixabay.hits[0].webformatURL);
+    Client.changeBackground(apiData.pixabay.hits[0].largeImageURL);
     Client.updateUi(travelResponse);
 
  })
