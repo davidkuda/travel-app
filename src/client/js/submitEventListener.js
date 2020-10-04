@@ -10,7 +10,7 @@
         endDate: userInput.endDate
     } // TODO: change date format
 
-    Client.validateDate(userInput);
+    Client.parseDates(userInput);
 
     Client.updateUi(Client.markupLoader); //TODO: make markup class and get child loader
 

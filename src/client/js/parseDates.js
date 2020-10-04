@@ -1,4 +1,4 @@
-export const validateDate = (userInput) => {
+export const parseDates = (userInput) => {
 
     var dayjs = require('dayjs');
     dayjs().format();

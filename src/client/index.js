@@ -17,7 +17,7 @@ import {getWeatherbitUrl} from './js/apiWeatherbit';
 import { getPixabayUrl } from './js/apiPixabay';
 import {submitEventListener} from './js/submitEventListener';
 import {changeBackground} from './js/changeBackground';
-import {validateDate} from './js/validateDate';
+import {parseDates} from './js/parseDates';
 
 // import assets
  import travelAlps from "./media/travel-alps.jpg";
@@ -36,5 +36,5 @@ export {
     markupResponse,
     submitEventListener,
     changeBackground,
-    validateDate
+    parseDates
 }
