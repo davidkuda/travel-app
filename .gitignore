@@ -2,3 +2,4 @@ node_modules
 .DS_Store
 /dist
 notes.md
+src/client/views/private.html
