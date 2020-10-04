@@ -4,15 +4,8 @@
  userInputForm.addEventListener('submit', async () => {
 
     let userInput = Client.getUserInput();
-    console.table({userInput: userInput});
-    let dates = {
-        startDate: userInput.startDate,
-        endDate: userInput.endDate
-    } // TODO: change date format
-
-    Client.parseDates(userInput);
-
-    Client.updateUi(Client.markupLoader); //TODO: make markup class and get child loader
+    let dates = Client.parseDates(userInput);
+    Client.updateUi(Client.markupLoader);
 
     // get Geonames API Data
 
