@@ -1,7 +1,11 @@
  // variables
  const userInputForm = document.getElementById('userInputForm');
 
- userInputForm.addEventListener('submit', async () => {
+ userInputForm.addEventListener('submit', async (event) => {
+
+    event.preventDefault();
+
+    // Client.formPreventDefault();
 
     let userInput = Client.getUserInput();
     let dates = Client.parseDates(userInput);
