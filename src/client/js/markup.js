@@ -15,8 +15,8 @@ export const markupResponse = (apiData = {}, dates = {}) => {
 
     return `
     <h1>${apiData.geonames.geonames[0].name}, ${apiData.geonames.geonames[0].countryName}</h1>
-    <h3>from ${dates.startDate} to ${dates.endDate}</h3>
-    <h3>You will start your trip ${dates.countdown}!</h3>
+    <h3>from ${dates.startDate} to ${dates.endDate}<br>
+    You will start your trip ${dates.countdown}!</h3>
 
     <h3>Weather in the next three days:</h3>
 <div class="weather-box">
