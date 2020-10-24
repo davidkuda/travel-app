@@ -98,7 +98,7 @@ input[type="text"] {
 
 }
 
-@media all and (max-width:360px) {
+@media all and (max-width:400px) {
     header nav li {
         margin: 0 10px;
     }
@@ -109,6 +109,7 @@ input[type="text"] {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         flex-direction: column;
+        width: 300px;
     }
 
     input[type="search"] {
