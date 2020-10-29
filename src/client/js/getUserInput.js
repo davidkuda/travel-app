@@ -5,12 +5,14 @@ export function getUserInput() {
     let inputStartDate = document.getElementById("form-start-date").value;
     let inputEndDate = document.getElementById("form-end-date").value;
 
+    let parsedDates = Client.parseDates(inputStartDate, inputEndDate);
+
     let userInput = {
         destination: inputDestination,
-        startDate: inputStartDate,
-        endDate: inputEndDate
+        startDate: parsedDates.startDate,
+        endDate: parsedDates.endDate,
+        countdown: parsedDates.countdown
     }
 
     return userInput
-    // TODO: In future the app should post data to the backend
 };

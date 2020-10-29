@@ -8,8 +8,12 @@
     // Client.formPreventDefault();
 
     let userInput = Client.getUserInput();
-    let dates = Client.parseDates(userInput);
+
     Client.updateUi(Client.markup.loader);
+
+    // post data to backend
+
+    Client.postData('/request', 'userInput')
 
     // get Geonames API Data
 
