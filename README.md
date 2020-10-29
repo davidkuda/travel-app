@@ -4,6 +4,11 @@ In this repo I will build my capstone project of [Udacity's](https://www.udacity
 
 The user enters a destination and a date for departure and arrival. Based on that, the app requests information on three APIs; it gets geo-location data from Geonames API, Weatherdata from Weatherbit API and a picture of the city from Pixabay API. 
 
+### extra features
+
+- The app shows duration and end date of trip
+- Get weather of the next three days of that location 
+
 ### Running the App
 
 - `npm run build-dev` will run the app in dev mode on port 8081
