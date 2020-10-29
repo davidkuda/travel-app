@@ -1,4 +1,6 @@
-export const markupLoader = `
+export let markup = {};
+
+markup.loader = `
 <svg class="loader" viewBox="0 0 24 24">
     <circle class="loader__value" cx="12" cy="12" r="10" />
     <circle class="loader__value" cx="12" cy="12" r="10" />
@@ -8,14 +10,14 @@ export const markupLoader = `
     <circle class="loader__value" cx="12" cy="12" r="10" />
 </svg>`;
 
-export const markupResponse = (apiData = {}, dates = {}) => {
+markup.response = (apiData = {}, dates = {}) => {
 
     const dayjs = require('dayjs');
 
 
     return `
     <h1>${apiData.geonames.geonames[0].name}, ${apiData.geonames.geonames[0].countryName}</h1>
-    <h3>from ${dates.startDate} to ${dates.endDate}<br>
+    <h3>for ${dates.endDate - dates.startDate} from ${dates.startDate} to ${dates.endDate}<br>
     You will start your trip ${dates.countdown}!</h3>
 
     <h3>Weather in the next three days:</h3>
@@ -41,5 +43,3 @@ export const markupResponse = (apiData = {}, dates = {}) => {
 </div>
     `;
 };
-
-' <img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600"> '

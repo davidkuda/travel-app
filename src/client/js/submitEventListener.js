@@ -9,7 +9,7 @@
 
     let userInput = Client.getUserInput();
     let dates = Client.parseDates(userInput);
-    Client.updateUi(Client.markupLoader);
+    Client.updateUi(Client.markup.loader);
 
     // get Geonames API Data
 
@@ -32,7 +32,7 @@
 
     console.log(apiData)
 
-    let travelResponse = await Client.markupResponse(apiData, dates);
+    let travelResponse = await Client.markup.response(apiData, dates);
     // Client.changeBackground(apiData.pixabay.hits[0].webformatURL);
     Client.changeBackground(apiData.pixabay.hits[0].largeImageURL);
     Client.updateUi(travelResponse);

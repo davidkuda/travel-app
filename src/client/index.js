@@ -9,7 +9,7 @@ import "./styles/footer.scss";
 // import own modules
 import {formPreventDefault} from './js/formPreventDefault';
 import {getUserInput} from './js/getUserInput';
-import {markupLoader, markupResponse} from './js/markup';
+import {markup} from './js/markup';
 import {updateUi} from './js/updateUi';
 import {apiCall} from './js/apiCall';
 import {getGeonamesUrl} from './js/apiGeonames';
@@ -18,6 +18,7 @@ import { getPixabayUrl } from './js/apiPixabay';
 import {submitEventListener} from './js/submitEventListener';
 import {changeBackground} from './js/changeBackground';
 import {parseDates} from './js/parseDates';
+import {postData} from './js/postData';
 
 // import assets
  import travelAlps from "./media/travel-alps.jpg";
@@ -27,14 +28,14 @@ import {parseDates} from './js/parseDates';
 export {
     formPreventDefault,
     getUserInput,
-    markupLoader,
+    markup,
     updateUi,
     apiCall,
     getGeonamesUrl,
     getWeatherbitUrl,
     getPixabayUrl,
-    markupResponse,
     submitEventListener,
     changeBackground,
-    parseDates
+    parseDates,
+    postData
 }
