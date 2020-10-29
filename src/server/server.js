@@ -16,21 +16,17 @@ app.listen(3000, function() {
 });
 
 // create an object to store all data that is available to front end 
-const data = {};
+const data = {"a": "2"};
 
 // Deliver data to front end through endpoint
 app.get('/response', (req, res) => {
   res.send(data)
 });
 
-// create callback for post request to /request
-
-const getUserInput = (req, res) => {
-  console.log('caught post request')
-  console.log(req.body)
-  // data.push(req.body)
-}
-
 // create an endpoint to receive input from front end
-app.post('/request', getUserInput);
-
+app.post('/d', async (req, res) => {
+  let data = await req.body;
+  console.log('caught post request')
+  console.log(data)
+  // data.push(req.body)
+});
