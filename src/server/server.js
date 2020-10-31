@@ -1,12 +1,16 @@
+// Requires
+const apiRequests = require('apiRequests')
 const express = require("express");
-// const { markup } = require("../client");
-const app = express();
-
-app.use(express.static('dist'))
-
+const bodyParser = require('body-parser');
 const cors = require('cors');
-app.use(cors())
 
+// Express
+const app = express();
+app.use(express.static('dist'));
+app.use(cors());
+app.use(bodyParser.json())
+
+// Routes
 app.get("/", function (req, res) {
   res.send('dist/index.html');
 });
@@ -16,7 +20,7 @@ app.listen(3000, function() {
 });
 
 // create an object to store all data that is available to front end 
-const data = {"a": "2"};
+const data = {};
 
 // Deliver data to front end through endpoint
 app.get('/response', (req, res) => {
@@ -25,8 +29,8 @@ app.get('/response', (req, res) => {
 
 // create an endpoint to receive input from front end
 app.post('/d', async (req, res) => {
-  let data = await req.body;
+  let data = req.body;
   console.log('caught post request')
   console.log(data)
-  // data.push(req.body)
+  console.log(res.body)
 });
