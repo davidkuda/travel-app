@@ -4,7 +4,7 @@
   "description": "In this repo I will build my capstone project of Udacity's Front End Engineer Degree.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node src/server/server.js --open",
     "build-prod": "webpack --config webpack.prod.js",
     "build-dev": "webpack-dev-server  --config webpack.dev.js --open"
