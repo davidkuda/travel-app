@@ -1,5 +1,5 @@
 // Requires
-const apiRequests = require('apiRequests')
+// const apiRequests = require('apiRequests')
 const express = require("express");
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -20,7 +20,7 @@ app.listen(3000, function() {
 });
 
 // create an object to store all data that is available to front end 
-const data = {};
+const inputData = {};
 
 // Deliver data to front end through endpoint
 app.get('/response', (req, res) => {
@@ -30,7 +30,6 @@ app.get('/response', (req, res) => {
 // create an endpoint to receive input from front end
 app.post('/d', async (req, res) => {
   let data = req.body;
-  console.log('caught post request')
   console.log(data)
-  console.log(res.body)
+  inputData.push(data)
 });
