@@ -9,9 +9,10 @@ export function getUserInput() {
 
     let userInput = {
         destination: inputDestination,
-        startDate: parsedDates.startDate,
-        endDate: parsedDates.endDate,
-        countdown: parsedDates.countdown
+        startDateText: parsedDates.startDate,
+        endDateText: parsedDates.endDate,
+        countdown: parsedDates.countdown,
+        dayjs: parsedDates.dayjs
     }
 
     return userInput
