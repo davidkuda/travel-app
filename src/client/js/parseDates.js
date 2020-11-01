@@ -4,14 +4,17 @@ export const parseDates = (startDate, endDate) => {
     const relativeTime = require('dayjs/plugin/relativeTime');
     dayjs.extend(relativeTime);
 
-    let parsedDates = {
+    const dayFormats = ['YYYY-MM-DD', 'DD.MM.YYYY', 'MM.DD.YYYY', 'DD/MM/YYYY', 'MM/DD/YYYY'];
+
+     let parsedDates = {
+        
         dayjs: {
-            startDate: dayjs(startDate, ['YYYY-MM-DD', 'DD.MM.YYYY']),
-            endDate: dayjs(endDate, ['YYYY-MM-DD', 'DD.MM.YYYY'])
+            startDate: dayjs(userInput.startDate, dayFormats).format('DD.MM.YYYY'),
+            endDate: dayjs(userInput.endDate, dayFormats).format('DD.MM.YYYY')
         },
-        startDate: dayjs(startDate, ['YYYY-MM-DD', 'DD.MM.YYYY']).format('DD. MMMM YYYY'),
-        endDate: dayjs(endDate, ['YYYY-MM-DD', 'DD.MM.YYYY']).format('DD. MMMM YYYY'),
-        countdown: dayjs(startDate, ['YYYY-MM-DD', 'DD.MM.YYYY']).fromNow()
+        startDate: dayjs(userInput.startDate, dayFormats).format('DD. MMMM YYYY'),
+        endDate: dayjs(userInput.endDate, dayFormats).format('DD. MMMM YYYY'),
+        countdown: dayjs(userInput.startDate, dayFormats).fromNow()
     }
 
     return parsedDates
