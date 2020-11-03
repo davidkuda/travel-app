@@ -11,10 +11,6 @@
 
     Client.updateUi(Client.markup.loader);
 
-    // post data to backend
-
-    await Client.postData('/post', userInput)
-
     // get Geonames API Data
 
     let apiData = {
@@ -36,7 +32,7 @@
 
     console.log(apiData)
 
-    let travelResponse = await Client.markup.response(apiData, dates);
+    let travelResponse = await Client.markup.response(apiData, userInput);
     // Client.changeBackground(apiData.pixabay.hits[0].webformatURL);
     Client.changeBackground(apiData.pixabay.hits[0].largeImageURL);
     Client.updateUi(travelResponse);

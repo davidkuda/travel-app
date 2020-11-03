@@ -10,15 +10,15 @@ markup.loader = `
     <circle class="loader__value" cx="12" cy="12" r="10" />
 </svg>`;
 
-markup.response = (apiData = {}, dates = {}) => {
+markup.response = (apiData = {}, userInput = {}) => {
 
     const dayjs = require('dayjs');
 
 
     return `
     <h1>${apiData.geonames.geonames[0].name}, ${apiData.geonames.geonames[0].countryName}</h1>
-    <h3>for ${dates.endDate - dates.startDate} from ${dates.startDate} to ${dates.endDate}<br>
-    You will start your trip ${dates.countdown}!</h3>
+    <h3>for ${userInput.duration} days from ${userInput.startDateText} to ${userInput.endDateText}<br>
+    You will start your trip ${userInput.countdown}!</h3>
 
     <h3>Weather in the next three days:</h3>
 <div class="weather-box">
