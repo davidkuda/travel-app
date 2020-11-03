@@ -16,7 +16,8 @@ export const parseDates = (startDate, endDate) => {
         },
         startDate: dayjs(startDate, dayFormats).format('DD. MMMM YYYY'),
         endDate: dayjs(endDate, dayFormats).format('DD. MMMM YYYY'),
-        countdown: dayjs(startDate, dayFormats).fromNow()
+        countdown: dayjs(startDate, dayFormats).fromNow(),
+        duration: dayjs(endDate, dayFormats).diff(dayjs(startDate, dayFormats), 'day')
     }
 
     return parsedDates

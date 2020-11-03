@@ -12,7 +12,8 @@ export function getUserInput() {
         startDateText: parsedDates.startDate,
         endDateText: parsedDates.endDate,
         countdown: parsedDates.countdown,
-        dayjs: parsedDates.dayjs
+        dayjs: parsedDates.dayjs,
+        duration: parsedDates.duration
     }
 
     return userInput
