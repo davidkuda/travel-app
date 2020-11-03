@@ -13,7 +13,7 @@
 
     // post data to backend
 
-    await Client.postData('/d', userInput)
+    await Client.postData('/post', userInput)
 
     // get Geonames API Data
 

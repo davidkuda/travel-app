@@ -28,7 +28,7 @@ app.get('/response', (req, res) => {
 });
 
 // create an endpoint to receive input from front end
-app.post('/d', async (req, res) => {
+app.post('/post', async (req, res) => {
   let data = req.body;
   console.log(data)
   inputData.push(data)

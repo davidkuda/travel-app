@@ -10,10 +10,7 @@ export const postData = async (url = "", data = {}) => {
     body: JSON.stringify(data)
   });
   try {
-    const postData = await response.json();
-    console.log('dave try')
-    console.log({postData})
-    return postData
+    return response.json();
   }
   catch (error) {
     console.log({error});
