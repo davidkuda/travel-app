@@ -3,6 +3,8 @@ export const parseDates = (startDate, endDate) => {
     const dayjs = require('dayjs');
     const relativeTime = require('dayjs/plugin/relativeTime');
     dayjs.extend(relativeTime);
+    const customParseFormat = require('dayjs/plugin/customParseFormat')
+    dayjs.extend(customParseFormat)
 
     const dayFormats = ['YYYY-MM-DD', 'DD.MM.YYYY', 'MM.DD.YYYY', 'DD/MM/YYYY', 'MM/DD/YYYY'];
 
