@@ -30,8 +30,6 @@
     let weatherbit = await Client.apiCall(await Client.getWeatherbitUrl(latitude, longitude));
     apiData['weatherbit'] = weatherbit;
 
-    console.log(apiData)
-
     let travelResponse = await Client.markup.response(apiData, userInput);
     // Client.changeBackground(apiData.pixabay.hits[0].webformatURL);
     Client.changeBackground(apiData.pixabay.hits[0].largeImageURL);
