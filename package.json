@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "nodemon src/server/server.js --open",
+    "start": "nodemon src/server/start.js --open",
     "build-prod": "webpack --config webpack.prod.js",
     "build-dev": "webpack-dev-server  --config webpack.dev.js --open"
   },
@@ -29,6 +29,7 @@
     "jest": "^26.6.1",
     "node-sass": "^4.14.1",
     "nodemon": "^2.0.6",
+    "regenerator-runtime": "^0.13.7",
     "sass-loader": "^10.0.2",
     "style-loader": "^1.2.1",
     "supertest": "^6.0.1",
