@@ -18,3 +18,7 @@ app.get("/", function (req, res) {
 app.listen(3000, function() {
     console.log("app listening on port 3000!");
 });
+
+app.get('/response', (req, res) => {
+  res.send('THIS IS SPARTA!')
+})
