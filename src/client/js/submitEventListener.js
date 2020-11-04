@@ -17,17 +17,16 @@
         geonames: await Client.apiCall(await Client.getGeonamesUrl(userInput.destination))
     };
 
+    let {name, lat, lng} = apiData.geonames.geonames[0];
+
     // get Pixabay API Data
 
-    let geonamesCity = apiData.geonames.geonames[0].name;
-    let pixabayData = await Client.apiCall(await Client.getPixabayUrl(geonamesCity));
+    let pixabayData = await Client.apiCall(await Client.getPixabayUrl(name));
     apiData['pixabay'] = pixabayData;
 
     // get Weatherbit API Data
 
-    let latitude = apiData.geonames.geonames[0].lat;
-    let longitude = apiData.geonames.geonames[0].lng;
-    let weatherbit = await Client.apiCall(await Client.getWeatherbitUrl(latitude, longitude));
+    let weatherbit = await Client.apiCall(await Client.getWeatherbitUrl(lat, lng));
     apiData['weatherbit'] = weatherbit;
 
     let travelResponse = await Client.markup.response(apiData, userInput);
