@@ -11,14 +11,11 @@ import {formPreventDefault} from './js/formPreventDefault';
 import {getUserInput} from './js/getUserInput';
 import {markup} from './js/markup';
 import {updateUi} from './js/updateUi';
-import {apiCall} from './js/apiCall';
-import {getGeonamesUrl} from './js/apiGeonames';
-import {getWeatherbitUrl} from './js/apiWeatherbit';
-import { getPixabayUrl } from './js/apiPixabay';
 import {submitEventListener} from './js/submitEventListener';
 import {changeBackground} from './js/changeBackground';
 import {parseDates} from './js/parseDates';
 import {postData} from './js/postData';
+import {apiCall, getGeonamesUrl, getPixabayUrl, getWeatherbitUrl} from './js/api';
 
 // import assets
  import travelAlps from "./media/travel-alps.jpg";
