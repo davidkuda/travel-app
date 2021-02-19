@@ -1,13 +1,11 @@
 # travel-app
 
-In this repo I will build my capstone project of [Udacity's](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011) Front End Engineer Degree.
 
-The user enters a destination and a date for departure and arrival. Based on that, the app requests information on three APIs; it gets geo-location data from Geonames API, Weatherdata from Weatherbit API and a picture of the city from Pixabay API. 
+![gif with a preview of the page](docs/screen_recording.gif)
 
-### extra features
+In this repo I have built my capstone project of [Udacity's](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011) Front End Engineer Degree.
 
-- The app shows duration and end date of trip
-- Get weather of the next three days of that location 
+The user enters a destination and a date for departure and arrival. Based on that, the app requests information on three APIs; it gets geo-location data from Geonames API, Weatherdata from Weatherbit API and a picture of the city from Pixabay API. The app shows duration and end date of trip. Plus the app gets the weather of the next three days of that location.
 
 ### Running the App
 
@@ -23,7 +21,7 @@ The user enters a destination and a date for departure and arrival. Based on tha
 - HTML5 & CSS3
 
 ### Core Topics
-
+- Build process using Webpack
 - Asynchronous JavaScript
 - API Requests
 - Single Page Apps (with vanilla JS)
